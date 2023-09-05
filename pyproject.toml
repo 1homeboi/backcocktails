@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "cocktailsproject1"
+version = "0.1.0"
+description = ""
+authors = ["1homeboi <kelevra_96_09@mail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+djangorestframework = "^3.14.0"
+django = "^4.2.5"
+markdown = "^3.4.4"
+django-filter = "^23.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
