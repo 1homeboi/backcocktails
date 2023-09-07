@@ -14,13 +14,13 @@ from .views import (
 router = DefaultRouter()
 
 # Регистрируйте представления в маршрутере
-router.register(r'ingredients', IngredientViewSet)
-router.register(r'ingredientcategories', IngredientCategoryViewSet)
-router.register(r'recipes', RecipeViewSet)
-router.register(r'recipeingredients', RecipeIngredientViewSet)
-router.register(r'reviews', ReviewViewSet)
-router.register(r'users', UserViewSet)
-router.register(r'favorites', FavoriteViewSet)
+router.register('ingredients', IngredientViewSet)
+router.register('ingredientcategories', IngredientCategoryViewSet)
+router.register('recipes', RecipeViewSet)
+router.register('recipeingredients', RecipeIngredientViewSet)
+router.register('reviews', ReviewViewSet)
+router.register('users', UserViewSet)
+router.register('favorites', FavoriteViewSet)
 
 # Определите маршруты
 urlpatterns = [

@@ -21,7 +21,7 @@ class Recipe(models.Model):
     instructions = models.TextField()
     difficulty = models.CharField(max_length=50)
     prep_time = models.IntegerField()
-    rating = models.DecimalField(max_digits=3, decimal_places=2, default=0.0)
+    rating = models.FloatField(default=0.0)
 
     def __str__(self):
         return self.name

@@ -17,20 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from constructor.views import *
-router = DefaultRouter()
-
-# Регистрируйте представления в маршрутере
-router.register(r'ingredients', IngredientViewSet)
-router.register(r'ingredientcategories', IngredientCategoryViewSet)
-router.register(r'recipes', RecipeViewSet)
-router.register(r'recipeingredients', RecipeIngredientViewSet)
-router.register(r'reviews', ReviewViewSet)
-router.register(r'users', UserViewSet)
-router.register(r'favorites', FavoriteViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
-    path(r'api/recipes/', RecipeList.as_view()),
-    path(r'api/products/<int:id>/', ProductDetail.as_view())
-]
+    path('', include('constructor.urls'))]
