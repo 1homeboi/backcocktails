@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from .models import Ingredient, IngredientCategory, Recipe, RecipeIngredient, Review, User, Favorite
-from .serializers import IngredientSerializer, IngredientCategorySerializer, RecipeSerializer, RecipeIngredientSerializer, ReviewSerializer, UserSerializer, FavoriteSerializer
+from .models import Ingredient, IngredientCategory, Cocktail, CocktailIngredient, Review, User, Favorite
+from .serializers import IngredientSerializer, IngredientCategorySerializer, CocktailSerializer, CocktailIngredientSerializer, ReviewSerializer, UserSerializer, FavoriteSerializer
 
 class IngredientViewSet(viewsets.ModelViewSet):
     queryset = Ingredient.objects.all()
@@ -10,13 +10,13 @@ class IngredientCategoryViewSet(viewsets.ModelViewSet):
     queryset = IngredientCategory.objects.all()
     serializer_class = IngredientCategorySerializer
 
-class RecipeViewSet(viewsets.ModelViewSet):
-    queryset = Recipe.objects.all()
-    serializer_class = RecipeSerializer
+class CocktailViewSet(viewsets.ModelViewSet):
+    queryset = Cocktail.objects.all()
+    serializer_class = CocktailSerializer
 
-class RecipeIngredientViewSet(viewsets.ModelViewSet):
-    queryset = RecipeIngredient.objects.all()
-    serializer_class = RecipeIngredientSerializer
+class CocktailIngredientViewSet(viewsets.ModelViewSet):
+    queryset = CocktailIngredient.objects.all()
+    serializer_class = CocktailIngredientSerializer
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
