@@ -2,7 +2,6 @@ from django.urls import path, include
 from rest_framework import routers
 from .views import (
     IngredientViewSet,
-    IngredientCategoryViewSet,
     CocktailViewSet,
     CocktailIngredientViewSet,
     ReviewViewSet,
@@ -15,7 +14,6 @@ router = routers.DefaultRouter()
 
 # Регистрируйте представления в маршрутере
 router.register(r'ingredients', IngredientViewSet)
-router.register(r'ingredientcategories', IngredientCategoryViewSet)
 router.register(r'cocktails', CocktailViewSet)
 router.register(r'cocktailingredients', CocktailIngredientViewSet)
 router.register(r'reviews', ReviewViewSet)
